@@ -22,6 +22,17 @@ An enterprise-grade, open-source Machine Learning platform for micro-mobility bi
 
 ---
 
+## 🚀 Live Demo
+
+Experience the application here:
+
+**🌐 Streamlit App:**  
+https://bikerentals-hekdtvxgrbswrhg3mp4shy.streamlit.app/
+
+> Explore demand prediction, fleet optimization, forecasting, explainability, monitoring, and executive analytics through the live interactive dashboard.
+
+---
+
 ## 🏗️ System Architecture
 
 ```mermaid
