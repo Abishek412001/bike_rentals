@@ -1,0 +1,18 @@
+models:
+  candidate_models:
+    - Ridge
+    - RandomForest
+    - LightGBM
+    - CatBoost
+    - XGBoost
+  default_champion: CatBoost
+  default_challenger: XGBoost
+
+optuna:
+  n_trials: 10
+  timeout_seconds: 60
+  search_space:
+    xgboost:
+      n_estimators: [100, 250]
+      max_depth: [4, 8]
+      learning_rate: [0.03, 0.15]

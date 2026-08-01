@@ -1,0 +1,192 @@
+2026-08-01 11:37:26 | INFO     | src.models.train_pipeline:run_training_pipeline:122 - Starting Enterprise Model Training & Benchmark Pipeline...
+2026-08-01 11:37:26 | INFO     | src.models.train_pipeline:get_bike_data:33 - Downloading UCI Bike Sharing dataset...
+2026-08-01 11:37:28 | WARNING  | src.models.train_pipeline:get_bike_data:38 - Could not download dataset: HTTP Error 404: Not Found. Generating realistic synthetic dataset...
+2026-08-01 11:37:28 | INFO     | src.models.train_pipeline:run_training_pipeline:150 - Executing 5-Fold TimeSeriesSplit Cross Validation across candidates...
+2026-08-01 11:37:28 | INFO     | src.models.train_pipeline:run_training_pipeline:174 -  -> Ridge Benchmark: R2=0.8166, RMSE=65.39, MAE=42.80, MAPE=30.29%
+2026-08-01 11:37:29 | INFO     | src.models.train_pipeline:run_training_pipeline:174 -  -> RandomForest Benchmark: R2=0.9539, RMSE=32.71, MAE=25.99, MAPE=21.96%
+2026-08-01 11:37:32 | INFO     | src.models.train_pipeline:run_training_pipeline:174 -  -> LightGBM Benchmark: R2=0.9531, RMSE=33.01, MAE=25.85, MAPE=22.26%
+2026-08-01 11:37:33 | INFO     | src.models.train_pipeline:run_training_pipeline:174 -  -> CatBoost Benchmark: R2=0.9596, RMSE=30.64, MAE=24.20, MAPE=20.98%
+2026-08-01 11:37:34 | INFO     | src.models.train_pipeline:run_training_pipeline:174 -  -> XGBoost Benchmark: R2=0.9556, RMSE=32.14, MAE=25.55, MAPE=21.63%
+2026-08-01 11:37:34 | INFO     | src.models.train_pipeline:run_training_pipeline:192 - Selected Champion Model: CatBoost | Challenger Model: XGBoost
+2026-08-01 11:37:34 | INFO     | src.models.train_pipeline:run_training_pipeline:204 - Training Quantile Regressors (10th and 90th percentiles)...
+2026-08-01 11:37:35 | INFO     | src.mlops.registry:save_champion:39 - Saved Champion model bundle (CatBoost) to C:\Users\Abishek\Downloads\bike_rental\models\champion\model_bundle.pkl
+2026-08-01 11:37:35 | INFO     | src.mlops.registry:save_challenger:59 - Saved Challenger model bundle (XGBoost) to C:\Users\Abishek\Downloads\bike_rental\models\challenger\model_bundle.pkl
+2026-08-01 11:37:40 | INFO     | src.models.evaluator:generate_all_reports_figures:239 - Generated 16 publication-quality dark-mode figures in reports/figures/
+2026-08-01 11:37:40 | INFO     | src.models.train_pipeline:run_training_pipeline:249 - Training pipeline completed successfully.
+2026-08-01 11:51:12 | INFO     | src.api.main:add_request_context_and_timing:53 - Request [8e63c930-f803-4efe-bd44-a7e3125375d0] | GET /health | Status: 200 | Latency: 9.8ms
+2026-08-01 11:51:12 | INFO     | src.api.main:add_request_context_and_timing:53 - Request [ced57ba9-eaf2-4f9a-bcd9-1429d96c9401] | GET /live | Status: 200 | Latency: 2.66ms
+2026-08-01 11:51:12 | INFO     | src.api.main:add_request_context_and_timing:53 - Request [38f883b4-b513-476a-9eff-3f799a262d6f] | GET /ready | Status: 200 | Latency: 2.67ms
+2026-08-01 11:51:12 | INFO     | src.api.main:add_request_context_and_timing:53 - Request [6b3a60db-8393-431d-aaef-3827eca34faf] | GET /version | Status: 200 | Latency: 18.5ms
+2026-08-01 11:51:12 | INFO     | src.api.main:add_request_context_and_timing:53 - Request [32e9f71b-cafa-477d-bf92-d9192accdaeb] | GET /model_info | Status: 200 | Latency: 3.37ms
+2026-08-01 11:51:12 | INFO     | src.api.main:add_request_context_and_timing:53 - Request [b1d0ce1b-cead-4be6-82c3-b5008866c788] | POST /predict | Status: 200 | Latency: 91.43ms
+2026-08-01 11:51:12 | INFO     | src.api.main:add_request_context_and_timing:53 - Request [8db0e6b8-1cf0-4ee0-851e-030c5e7b5971] | POST /predict_batch | Status: 200 | Latency: 85.69ms
+2026-08-01 11:51:12 | INFO     | src.models.train_pipeline:run_training_pipeline:122 - Starting Enterprise Model Training & Benchmark Pipeline...
+2026-08-01 11:51:12 | INFO     | src.models.train_pipeline:get_bike_data:33 - Downloading UCI Bike Sharing dataset...
+2026-08-01 11:51:13 | WARNING  | src.models.train_pipeline:get_bike_data:38 - Could not download dataset: HTTP Error 404: Not Found. Generating realistic synthetic dataset...
+2026-08-01 11:51:13 | INFO     | src.models.train_pipeline:run_training_pipeline:150 - Executing 5-Fold TimeSeriesSplit Cross Validation across candidates...
+2026-08-01 11:51:13 | INFO     | src.models.train_pipeline:run_training_pipeline:174 -  -> Ridge Benchmark: R2=0.8166, RMSE=65.39, MAE=42.80, MAPE=30.29%
+2026-08-01 11:51:14 | INFO     | src.models.train_pipeline:run_training_pipeline:174 -  -> RandomForest Benchmark: R2=0.9539, RMSE=32.71, MAE=25.99, MAPE=21.96%
+2026-08-01 11:51:17 | INFO     | src.models.train_pipeline:run_training_pipeline:174 -  -> LightGBM Benchmark: R2=0.9531, RMSE=33.01, MAE=25.85, MAPE=22.26%
+2026-08-01 11:51:19 | INFO     | src.models.train_pipeline:run_training_pipeline:174 -  -> CatBoost Benchmark: R2=0.9596, RMSE=30.64, MAE=24.20, MAPE=20.98%
+2026-08-01 11:51:20 | INFO     | src.models.train_pipeline:run_training_pipeline:174 -  -> XGBoost Benchmark: R2=0.9556, RMSE=32.14, MAE=25.55, MAPE=21.63%
+2026-08-01 11:51:21 | INFO     | src.models.train_pipeline:run_training_pipeline:192 - Selected Champion Model: CatBoost | Challenger Model: XGBoost
+2026-08-01 11:51:21 | INFO     | src.models.train_pipeline:run_training_pipeline:204 - Training Quantile Regressors (10th and 90th percentiles)...
+2026-08-01 11:51:21 | INFO     | src.mlops.registry:save_champion:39 - Saved Champion model bundle (CatBoost) to C:\Users\Abishek\Downloads\bike_rental\models\champion\model_bundle.pkl
+2026-08-01 11:51:22 | INFO     | src.mlops.registry:save_challenger:59 - Saved Challenger model bundle (XGBoost) to C:\Users\Abishek\Downloads\bike_rental\models\challenger\model_bundle.pkl
+2026-08-01 11:51:28 | INFO     | src.models.evaluator:generate_all_reports_figures:239 - Generated 16 publication-quality dark-mode figures in reports/figures/
+2026-08-01 11:51:28 | INFO     | src.models.train_pipeline:run_training_pipeline:249 - Training pipeline completed successfully.
+2026-08-01 11:52:02 | INFO     | src.api.main:add_request_context_and_timing:53 - Request [117abba0-7a4d-4c35-b81c-e34af9390540] | GET /health | Status: 200 | Latency: 18.87ms
+2026-08-01 11:52:02 | INFO     | src.api.main:add_request_context_and_timing:53 - Request [34b29d49-738d-4baf-8765-9d8767889226] | GET /live | Status: 200 | Latency: 3.73ms
+2026-08-01 11:52:02 | INFO     | src.api.main:add_request_context_and_timing:53 - Request [0ed042c2-ea5b-4999-a49d-e6ac50a87dc0] | GET /ready | Status: 200 | Latency: 3.26ms
+2026-08-01 11:52:02 | INFO     | src.api.main:add_request_context_and_timing:53 - Request [6b37f175-7d74-4e0c-8c2f-0f35a493703f] | GET /version | Status: 200 | Latency: 4.87ms
+2026-08-01 11:52:02 | INFO     | src.api.main:add_request_context_and_timing:53 - Request [e06e63c7-6b3b-4080-8b16-673a128d36ed] | GET /model_info | Status: 200 | Latency: 5.39ms
+2026-08-01 11:52:02 | INFO     | src.api.main:add_request_context_and_timing:53 - Request [728dc83d-16f6-4d31-96fc-bada837268de] | POST /predict | Status: 200 | Latency: 197.37ms
+2026-08-01 11:52:02 | INFO     | src.api.main:add_request_context_and_timing:53 - Request [1137545d-4db3-46c7-a294-f8cd90d44937] | POST /predict_batch | Status: 200 | Latency: 132.17ms
+2026-08-01 11:52:02 | INFO     | src.models.train_pipeline:run_training_pipeline:122 - Starting Enterprise Model Training & Benchmark Pipeline...
+2026-08-01 11:52:02 | INFO     | src.models.train_pipeline:get_bike_data:33 - Downloading UCI Bike Sharing dataset...
+2026-08-01 11:52:03 | WARNING  | src.models.train_pipeline:get_bike_data:38 - Could not download dataset: HTTP Error 404: Not Found. Generating realistic synthetic dataset...
+2026-08-01 11:52:03 | INFO     | src.models.train_pipeline:run_training_pipeline:150 - Executing 5-Fold TimeSeriesSplit Cross Validation across candidates...
+2026-08-01 11:52:03 | INFO     | src.models.train_pipeline:run_training_pipeline:174 -  -> Ridge Benchmark: R2=0.8166, RMSE=65.39, MAE=42.80, MAPE=30.29%
+2026-08-01 11:52:06 | INFO     | src.models.train_pipeline:run_training_pipeline:174 -  -> RandomForest Benchmark: R2=0.9539, RMSE=32.71, MAE=25.99, MAPE=21.96%
+2026-08-01 11:52:08 | INFO     | src.models.train_pipeline:run_training_pipeline:174 -  -> LightGBM Benchmark: R2=0.9531, RMSE=33.01, MAE=25.85, MAPE=22.26%
+2026-08-01 11:52:10 | INFO     | src.models.train_pipeline:run_training_pipeline:174 -  -> CatBoost Benchmark: R2=0.9596, RMSE=30.64, MAE=24.20, MAPE=20.98%
+2026-08-01 11:52:12 | INFO     | src.models.train_pipeline:run_training_pipeline:174 -  -> XGBoost Benchmark: R2=0.9556, RMSE=32.14, MAE=25.55, MAPE=21.63%
+2026-08-01 11:52:13 | INFO     | src.models.train_pipeline:run_training_pipeline:192 - Selected Champion Model: CatBoost | Challenger Model: XGBoost
+2026-08-01 11:52:13 | INFO     | src.models.train_pipeline:run_training_pipeline:204 - Training Quantile Regressors (10th and 90th percentiles)...
+2026-08-01 11:52:13 | INFO     | src.mlops.registry:save_champion:39 - Saved Champion model bundle (CatBoost) to C:\Users\Abishek\Downloads\bike_rental\models\champion\model_bundle.pkl
+2026-08-01 11:52:13 | INFO     | src.mlops.registry:save_challenger:59 - Saved Challenger model bundle (XGBoost) to C:\Users\Abishek\Downloads\bike_rental\models\challenger\model_bundle.pkl
+2026-08-01 11:52:19 | INFO     | src.models.evaluator:generate_all_reports_figures:239 - Generated 16 publication-quality dark-mode figures in reports/figures/
+2026-08-01 11:52:19 | INFO     | src.models.train_pipeline:run_training_pipeline:249 - Training pipeline completed successfully.
+2026-08-01 11:59:44 | INFO     | src.models.train_pipeline:run_training_pipeline:113 - Starting Enterprise Model Training Pipeline...
+2026-08-01 11:59:44 | INFO     | src.models.train_pipeline:get_bike_data:34 - Downloading UCI Bike Sharing dataset...
+2026-08-01 11:59:44 | WARNING  | src.models.train_pipeline:get_bike_data:39 - Could not download dataset: HTTP Error 404: Not Found. Generating realistic synthetic dataset...
+2026-08-01 11:59:45 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> Ridge Benchmark: R2=0.8166, RMSE=65.39
+2026-08-01 11:59:46 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> RandomForest Benchmark: R2=0.9539, RMSE=32.71
+2026-08-01 11:59:48 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> LightGBM Benchmark: R2=0.9531, RMSE=33.01
+2026-08-01 11:59:49 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> CatBoost Benchmark: R2=0.9596, RMSE=30.64
+2026-08-01 11:59:51 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> XGBoost Benchmark: R2=0.9556, RMSE=32.14
+2026-08-01 11:59:51 | INFO     | src.models.train_pipeline:run_training_pipeline:176 - Selected Champion Model: CatBoost | Challenger Model: XGBoost
+2026-08-01 11:59:51 | INFO     | src.mlops.registry:save_champion:33 - Saved Champion model bundle (CatBoost) to C:\Users\Abishek\Downloads\bike_rental\models\champion\model_bundle.pkl
+2026-08-01 11:59:51 | INFO     | src.mlops.registry:save_challenger:50 - Saved Challenger model bundle (XGBoost) to C:\Users\Abishek\Downloads\bike_rental\models\challenger\model_bundle.pkl
+2026-08-01 11:59:51 | INFO     | src.models.evaluator:generate_model_card:77 - Auto-generated Model Card at C:\Users\Abishek\Downloads\bike_rental\models\metadata\model_card.md
+2026-08-01 11:59:56 | INFO     | src.models.evaluator:generate_all_reports_figures:282 - Generated 16 publication-quality dark-mode figures in reports/figures/
+2026-08-01 12:00:13 | INFO     | src.api.main:add_request_context_and_timing:69 - Request [975ac3cf-db9f-4fa3-8d32-eed6be497051] | GET /health | Status: 200 | Latency: 10.26ms
+2026-08-01 12:00:13 | INFO     | src.api.main:add_request_context_and_timing:69 - Request [63985ee2-18e8-4688-82e9-67777afbef86] | GET /live | Status: 200 | Latency: 3.16ms
+2026-08-01 12:00:13 | INFO     | src.api.main:add_request_context_and_timing:69 - Request [0803a887-8bea-43b6-8163-1d92ef728526] | GET /ready | Status: 200 | Latency: 1.49ms
+2026-08-01 12:00:13 | INFO     | src.api.main:add_request_context_and_timing:69 - Request [9d6d0b15-46c3-4c09-811c-9be4340b2987] | GET /version | Status: 200 | Latency: 5.21ms
+2026-08-01 12:00:13 | INFO     | src.api.main:add_request_context_and_timing:69 - Request [5dd9a1d1-cb7c-4d4f-a22d-15ff9ffdb659] | GET /model_info | Status: 200 | Latency: 3.72ms
+2026-08-01 12:00:13 | INFO     | src.api.main:add_request_context_and_timing:69 - Request [2e109c97-95fd-4c94-8f7c-fc5aee079d28] | POST /predict | Status: 200 | Latency: 127.26ms
+2026-08-01 12:00:13 | INFO     | src.api.main:add_request_context_and_timing:69 - Request [7d9db40b-d73e-4f7f-8914-b238c7d4e889] | POST /predict_batch | Status: 200 | Latency: 85.66ms
+2026-08-01 12:00:14 | INFO     | src.models.train_pipeline:run_training_pipeline:113 - Starting Enterprise Model Training Pipeline...
+2026-08-01 12:00:14 | INFO     | src.models.train_pipeline:get_bike_data:34 - Downloading UCI Bike Sharing dataset...
+2026-08-01 12:00:14 | WARNING  | src.models.train_pipeline:get_bike_data:39 - Could not download dataset: HTTP Error 404: Not Found. Generating realistic synthetic dataset...
+2026-08-01 12:00:14 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> Ridge Benchmark: R2=0.8166, RMSE=65.39
+2026-08-01 12:00:16 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> RandomForest Benchmark: R2=0.9539, RMSE=32.71
+2026-08-01 12:00:18 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> LightGBM Benchmark: R2=0.9531, RMSE=33.01
+2026-08-01 12:00:19 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> CatBoost Benchmark: R2=0.9596, RMSE=30.64
+2026-08-01 12:00:21 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> XGBoost Benchmark: R2=0.9556, RMSE=32.14
+2026-08-01 12:00:21 | INFO     | src.models.train_pipeline:run_training_pipeline:176 - Selected Champion Model: CatBoost | Challenger Model: XGBoost
+2026-08-01 12:00:21 | INFO     | src.mlops.registry:save_champion:33 - Saved Champion model bundle (CatBoost) to C:\Users\Abishek\Downloads\bike_rental\models\champion\model_bundle.pkl
+2026-08-01 12:00:21 | INFO     | src.mlops.registry:save_challenger:50 - Saved Challenger model bundle (XGBoost) to C:\Users\Abishek\Downloads\bike_rental\models\challenger\model_bundle.pkl
+2026-08-01 12:00:21 | INFO     | src.models.evaluator:generate_model_card:77 - Auto-generated Model Card at C:\Users\Abishek\Downloads\bike_rental\models\metadata\model_card.md
+2026-08-01 12:00:27 | INFO     | src.models.evaluator:generate_all_reports_figures:282 - Generated 16 publication-quality dark-mode figures in reports/figures/
+2026-08-01 12:00:27 | INFO     | src.retraining.retrainer:execute_retraining:21 - Executing automated model retraining pipeline...
+2026-08-01 12:00:27 | INFO     | src.models.train_pipeline:run_training_pipeline:113 - Starting Enterprise Model Training Pipeline...
+2026-08-01 12:00:27 | INFO     | src.models.train_pipeline:get_bike_data:34 - Downloading UCI Bike Sharing dataset...
+2026-08-01 12:00:27 | WARNING  | src.models.train_pipeline:get_bike_data:39 - Could not download dataset: HTTP Error 404: Not Found. Generating realistic synthetic dataset...
+2026-08-01 12:00:28 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> Ridge Benchmark: R2=0.8166, RMSE=65.39
+2026-08-01 12:00:29 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> RandomForest Benchmark: R2=0.9539, RMSE=32.71
+2026-08-01 12:00:30 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> LightGBM Benchmark: R2=0.9531, RMSE=33.01
+2026-08-01 12:00:31 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> CatBoost Benchmark: R2=0.9596, RMSE=30.64
+2026-08-01 12:00:32 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> XGBoost Benchmark: R2=0.9556, RMSE=32.14
+2026-08-01 12:00:33 | INFO     | src.models.train_pipeline:run_training_pipeline:176 - Selected Champion Model: CatBoost | Challenger Model: XGBoost
+2026-08-01 12:00:33 | INFO     | src.mlops.registry:save_champion:33 - Saved Champion model bundle (CatBoost) to C:\Users\Abishek\Downloads\bike_rental\models\champion\model_bundle.pkl
+2026-08-01 12:00:33 | INFO     | src.mlops.registry:save_challenger:50 - Saved Challenger model bundle (XGBoost) to C:\Users\Abishek\Downloads\bike_rental\models\challenger\model_bundle.pkl
+2026-08-01 12:00:33 | INFO     | src.models.evaluator:generate_model_card:77 - Auto-generated Model Card at C:\Users\Abishek\Downloads\bike_rental\models\metadata\model_card.md
+2026-08-01 12:00:39 | INFO     | src.models.evaluator:generate_all_reports_figures:282 - Generated 16 publication-quality dark-mode figures in reports/figures/
+2026-08-01 12:00:39 | INFO     | src.retraining.retrainer:execute_retraining:35 - Retraining Retained Current Champion: New RMSE (30.64) vs Previous (30.64).
+2026-08-01 12:01:10 | INFO     | src.api.main:add_request_context_and_timing:69 - Request [519ad9be-4939-4278-86ce-1b21496b8ffa] | GET /health | Status: 200 | Latency: 20.13ms
+2026-08-01 12:01:10 | INFO     | src.api.main:add_request_context_and_timing:69 - Request [ec84022b-abb8-481e-8c3a-38fa62f1f2ee] | GET /live | Status: 200 | Latency: 4.23ms
+2026-08-01 12:01:10 | INFO     | src.api.main:add_request_context_and_timing:69 - Request [baf4f460-0e88-4fd0-a3cf-599210acf1c7] | GET /ready | Status: 200 | Latency: 3.81ms
+2026-08-01 12:01:10 | INFO     | src.api.main:add_request_context_and_timing:69 - Request [7214782b-9ded-43b3-8fee-c5ea3a07caaf] | GET /version | Status: 200 | Latency: 4.31ms
+2026-08-01 12:01:10 | INFO     | src.api.main:add_request_context_and_timing:69 - Request [912da899-0787-4c04-b288-874613156f61] | GET /model_info | Status: 200 | Latency: 5.65ms
+2026-08-01 12:01:10 | INFO     | src.api.main:add_request_context_and_timing:69 - Request [cc9582dd-f7ff-4bff-8405-be917e2a4cd7] | POST /predict | Status: 200 | Latency: 178.34ms
+2026-08-01 12:01:10 | INFO     | src.api.main:add_request_context_and_timing:69 - Request [6186ff60-730d-44f9-ab42-3850d2f6a091] | POST /predict_batch | Status: 200 | Latency: 132.62ms
+2026-08-01 12:01:10 | INFO     | src.models.train_pipeline:run_training_pipeline:113 - Starting Enterprise Model Training Pipeline...
+2026-08-01 12:01:10 | INFO     | src.models.train_pipeline:get_bike_data:34 - Downloading UCI Bike Sharing dataset...
+2026-08-01 12:01:11 | WARNING  | src.models.train_pipeline:get_bike_data:39 - Could not download dataset: HTTP Error 404: Not Found. Generating realistic synthetic dataset...
+2026-08-01 12:01:11 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> Ridge Benchmark: R2=0.8166, RMSE=65.39
+2026-08-01 12:01:14 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> RandomForest Benchmark: R2=0.9539, RMSE=32.71
+2026-08-01 12:01:16 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> LightGBM Benchmark: R2=0.9531, RMSE=33.01
+2026-08-01 12:01:18 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> CatBoost Benchmark: R2=0.9596, RMSE=30.64
+2026-08-01 12:01:20 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> XGBoost Benchmark: R2=0.9556, RMSE=32.14
+2026-08-01 12:01:20 | INFO     | src.models.train_pipeline:run_training_pipeline:176 - Selected Champion Model: CatBoost | Challenger Model: XGBoost
+2026-08-01 12:01:21 | INFO     | src.mlops.registry:save_champion:33 - Saved Champion model bundle (CatBoost) to C:\Users\Abishek\Downloads\bike_rental\models\champion\model_bundle.pkl
+2026-08-01 12:01:21 | INFO     | src.mlops.registry:save_challenger:50 - Saved Challenger model bundle (XGBoost) to C:\Users\Abishek\Downloads\bike_rental\models\challenger\model_bundle.pkl
+2026-08-01 12:01:21 | INFO     | src.models.evaluator:generate_model_card:77 - Auto-generated Model Card at C:\Users\Abishek\Downloads\bike_rental\models\metadata\model_card.md
+2026-08-01 12:01:27 | INFO     | src.models.evaluator:generate_all_reports_figures:282 - Generated 16 publication-quality dark-mode figures in reports/figures/
+2026-08-01 12:01:27 | INFO     | src.retraining.retrainer:execute_retraining:21 - Executing automated model retraining pipeline...
+2026-08-01 12:01:27 | INFO     | src.models.train_pipeline:run_training_pipeline:113 - Starting Enterprise Model Training Pipeline...
+2026-08-01 12:01:27 | INFO     | src.models.train_pipeline:get_bike_data:34 - Downloading UCI Bike Sharing dataset...
+2026-08-01 12:01:27 | WARNING  | src.models.train_pipeline:get_bike_data:39 - Could not download dataset: HTTP Error 404: Not Found. Generating realistic synthetic dataset...
+2026-08-01 12:01:27 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> Ridge Benchmark: R2=0.8166, RMSE=65.39
+2026-08-01 12:01:29 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> RandomForest Benchmark: R2=0.9539, RMSE=32.71
+2026-08-01 12:01:29 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> LightGBM Benchmark: R2=0.9531, RMSE=33.01
+2026-08-01 12:01:31 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> CatBoost Benchmark: R2=0.9596, RMSE=30.64
+2026-08-01 12:01:32 | INFO     | src.models.train_pipeline:run_training_pipeline:161 -  -> XGBoost Benchmark: R2=0.9556, RMSE=32.14
+2026-08-01 12:01:32 | INFO     | src.models.train_pipeline:run_training_pipeline:176 - Selected Champion Model: CatBoost | Challenger Model: XGBoost
+2026-08-01 12:01:32 | INFO     | src.mlops.registry:save_champion:33 - Saved Champion model bundle (CatBoost) to C:\Users\Abishek\Downloads\bike_rental\models\champion\model_bundle.pkl
+2026-08-01 12:01:33 | INFO     | src.mlops.registry:save_challenger:50 - Saved Challenger model bundle (XGBoost) to C:\Users\Abishek\Downloads\bike_rental\models\challenger\model_bundle.pkl
+2026-08-01 12:01:33 | INFO     | src.models.evaluator:generate_model_card:77 - Auto-generated Model Card at C:\Users\Abishek\Downloads\bike_rental\models\metadata\model_card.md
+2026-08-01 12:01:38 | INFO     | src.models.evaluator:generate_all_reports_figures:282 - Generated 16 publication-quality dark-mode figures in reports/figures/
+2026-08-01 12:01:38 | INFO     | src.retraining.retrainer:execute_retraining:35 - Retraining Retained Current Champion: New RMSE (30.64) vs Previous (30.64).
+2026-08-01 12:01:38 | INFO     | src.mlops.registry:rollback_to_challenger:70 - Successfully rolled back Champion model to Challenger bundle.
+2026-08-01 14:05:30 | INFO     | src.api.main:add_request_context_and_timing:72 - Request [1bf12310-d5dd-4998-84ae-466286423360] | GET /health | Status: 200 | Latency: 40.89ms
+2026-08-01 14:05:30 | INFO     | src.api.main:add_request_context_and_timing:72 - Request [8d8b0444-9353-497a-a6fc-795dcd60bbd4] | GET /live | Status: 200 | Latency: 3.88ms
+2026-08-01 14:05:30 | INFO     | src.api.main:add_request_context_and_timing:72 - Request [cad9a3e4-5778-4788-8cef-1013c965f1e3] | GET /ready | Status: 200 | Latency: 2.5ms
+2026-08-01 14:05:30 | INFO     | src.api.main:add_request_context_and_timing:72 - Request [eecef0f6-0234-4b3b-877f-f00976c4ec84] | GET /version | Status: 200 | Latency: 2.65ms
+2026-08-01 14:05:30 | INFO     | src.api.main:add_request_context_and_timing:72 - Request [3e5ea583-2ae1-402f-90c9-85b14ae7cc92] | GET /model_info | Status: 200 | Latency: 37.6ms
+2026-08-01 14:05:31 | INFO     | src.api.main:add_request_context_and_timing:72 - Request [7e7d54e6-a4d2-4b0e-b077-976be37a91ce] | POST /predict | Status: 200 | Latency: 610.61ms
+2026-08-01 14:05:31 | INFO     | src.api.main:add_request_context_and_timing:72 - Request [6004f04a-5c61-4f1e-a74f-d137d796dd15] | POST /predict_batch | Status: 200 | Latency: 121.01ms
+2026-08-01 14:05:32 | INFO     | src.models.train_pipeline:run_training_pipeline:147 - Starting Enterprise Model Training Pipeline...
+2026-08-01 14:05:32 | INFO     | src.models.train_pipeline:get_bike_data:38 - Downloading UCI Bike Sharing dataset...
+2026-08-01 14:05:32 | WARNING  | src.models.train_pipeline:get_bike_data:43 - Could not download dataset: HTTP Error 404: Not Found. Generating realistic synthetic dataset...
+2026-08-01 14:05:33 | INFO     | src.models.train_pipeline:run_training_pipeline:207 -  -> Ridge Benchmark: R2=0.8166, RMSE=65.39
+2026-08-01 14:05:35 | INFO     | src.models.train_pipeline:run_training_pipeline:207 -  -> RandomForest Benchmark: R2=0.9539, RMSE=32.71
+2026-08-01 14:05:38 | INFO     | src.models.train_pipeline:run_training_pipeline:207 -  -> LightGBM Benchmark: R2=0.9531, RMSE=33.01
+2026-08-01 14:05:40 | INFO     | src.models.train_pipeline:run_training_pipeline:207 -  -> CatBoost Benchmark: R2=0.9596, RMSE=30.64
+2026-08-01 14:05:42 | INFO     | src.models.train_pipeline:run_training_pipeline:207 -  -> XGBoost Benchmark: R2=0.9556, RMSE=32.14
+2026-08-01 14:05:43 | INFO     | src.models.train_pipeline:run_training_pipeline:221 - Selected Champion Model: CatBoost | Challenger Model: XGBoost
+2026-08-01 14:05:43 | INFO     | src.mlops.registry:save_champion:39 - Saved Champion model bundle (CatBoost) to C:\Users\Abishek\Downloads\bike_rental\models\champion\model_bundle.pkl
+2026-08-01 14:05:44 | INFO     | src.mlops.registry:save_challenger:58 - Saved Challenger model bundle (XGBoost) to C:\Users\Abishek\Downloads\bike_rental\models\challenger\model_bundle.pkl
+2026-08-01 14:05:44 | INFO     | src.models.evaluator:generate_model_card:77 - Auto-generated Model Card at C:\Users\Abishek\Downloads\bike_rental\models\metadata\model_card.md
+2026-08-01 14:05:52 | INFO     | src.models.evaluator:generate_all_reports_figures:414 - Generated 16 publication-quality dark-mode figures in reports/figures/
+2026-08-01 14:05:52 | INFO     | src.retraining.retrainer:execute_retraining:26 - Executing automated model retraining pipeline...
+2026-08-01 14:05:52 | INFO     | src.models.train_pipeline:run_training_pipeline:147 - Starting Enterprise Model Training Pipeline...
+2026-08-01 14:05:52 | INFO     | src.models.train_pipeline:get_bike_data:38 - Downloading UCI Bike Sharing dataset...
+2026-08-01 14:05:52 | WARNING  | src.models.train_pipeline:get_bike_data:43 - Could not download dataset: HTTP Error 404: Not Found. Generating realistic synthetic dataset...
+2026-08-01 14:05:52 | INFO     | src.models.train_pipeline:run_training_pipeline:207 -  -> Ridge Benchmark: R2=0.8166, RMSE=65.39
+2026-08-01 14:05:54 | INFO     | src.models.train_pipeline:run_training_pipeline:207 -  -> RandomForest Benchmark: R2=0.9539, RMSE=32.71
+2026-08-01 14:05:55 | INFO     | src.models.train_pipeline:run_training_pipeline:207 -  -> LightGBM Benchmark: R2=0.9531, RMSE=33.01
+2026-08-01 14:05:57 | INFO     | src.models.train_pipeline:run_training_pipeline:207 -  -> CatBoost Benchmark: R2=0.9596, RMSE=30.64
+2026-08-01 14:05:59 | INFO     | src.models.train_pipeline:run_training_pipeline:207 -  -> XGBoost Benchmark: R2=0.9556, RMSE=32.14
+2026-08-01 14:05:59 | INFO     | src.models.train_pipeline:run_training_pipeline:221 - Selected Champion Model: CatBoost | Challenger Model: XGBoost
+2026-08-01 14:06:00 | INFO     | src.mlops.registry:save_champion:39 - Saved Champion model bundle (CatBoost) to C:\Users\Abishek\Downloads\bike_rental\models\champion\model_bundle.pkl
+2026-08-01 14:06:00 | INFO     | src.mlops.registry:save_challenger:58 - Saved Challenger model bundle (XGBoost) to C:\Users\Abishek\Downloads\bike_rental\models\challenger\model_bundle.pkl
+2026-08-01 14:06:00 | INFO     | src.models.evaluator:generate_model_card:77 - Auto-generated Model Card at C:\Users\Abishek\Downloads\bike_rental\models\metadata\model_card.md
+2026-08-01 14:06:07 | INFO     | src.models.evaluator:generate_all_reports_figures:414 - Generated 16 publication-quality dark-mode figures in reports/figures/
+2026-08-01 14:06:07 | INFO     | src.retraining.retrainer:execute_retraining:42 - Retraining Retained Current Champion: New RMSE (30.64) vs Previous (30.64).
+2026-08-01 14:06:07 | INFO     | src.mlops.registry:rollback_to_challenger:79 - Successfully rolled back Champion model to Challenger bundle.
+2026-08-01 14:06:18 | INFO     | src.models.train_pipeline:run_training_pipeline:147 - Starting Enterprise Model Training Pipeline...
+2026-08-01 14:06:18 | INFO     | src.models.train_pipeline:get_bike_data:38 - Downloading UCI Bike Sharing dataset...
+2026-08-01 14:06:18 | WARNING  | src.models.train_pipeline:get_bike_data:43 - Could not download dataset: HTTP Error 404: Not Found. Generating realistic synthetic dataset...
+2026-08-01 14:06:18 | INFO     | src.models.train_pipeline:run_training_pipeline:207 -  -> Ridge Benchmark: R2=0.8166, RMSE=65.39
+2026-08-01 14:06:20 | INFO     | src.models.train_pipeline:run_training_pipeline:207 -  -> RandomForest Benchmark: R2=0.9539, RMSE=32.71
+2026-08-01 14:06:22 | INFO     | src.models.train_pipeline:run_training_pipeline:207 -  -> LightGBM Benchmark: R2=0.9531, RMSE=33.01
+2026-08-01 14:06:24 | INFO     | src.models.train_pipeline:run_training_pipeline:207 -  -> CatBoost Benchmark: R2=0.9596, RMSE=30.64
+2026-08-01 14:06:25 | INFO     | src.models.train_pipeline:run_training_pipeline:207 -  -> XGBoost Benchmark: R2=0.9556, RMSE=32.14
+2026-08-01 14:06:25 | INFO     | src.models.train_pipeline:run_training_pipeline:221 - Selected Champion Model: CatBoost | Challenger Model: XGBoost
+2026-08-01 14:06:26 | INFO     | src.mlops.registry:save_champion:39 - Saved Champion model bundle (CatBoost) to C:\Users\Abishek\Downloads\bike_rental\models\champion\model_bundle.pkl
+2026-08-01 14:06:26 | INFO     | src.mlops.registry:save_challenger:58 - Saved Challenger model bundle (XGBoost) to C:\Users\Abishek\Downloads\bike_rental\models\challenger\model_bundle.pkl
+2026-08-01 14:06:26 | INFO     | src.models.evaluator:generate_model_card:77 - Auto-generated Model Card at C:\Users\Abishek\Downloads\bike_rental\models\metadata\model_card.md
+2026-08-01 14:06:32 | INFO     | src.models.evaluator:generate_all_reports_figures:414 - Generated 16 publication-quality dark-mode figures in reports/figures/

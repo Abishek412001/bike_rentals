@@ -1,0 +1,13 @@
+rate_limiting:
+  enabled: true
+  predict_limit: "120/minute"
+  batch_limit: "30/minute"
+
+cors:
+  allow_origins:
+    - "*"
+  allow_credentials: true
+  allow_methods:
+    - "*"
+  allow_headers:
+    - "*"

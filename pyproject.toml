@@ -1,0 +1,33 @@
+[tool.black]
+line-length = 88
+target-version = ['py311']
+extend-exclude = '''
+(
+  .*\(2\)\..*
+  | \.venv
+)
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+exclude = [
+    "Bike_rental (2).ipynb",
+    "app (2).py",
+    ".venv"
+]
+
+[tool.ruff.lint]
+ignore = [
+    "BLE001", # Do not catch blind exception
+    "RUF013", # Implicit Optional
+    "PERF102",# Dict items vs values
+    "S110",   # Try except pass
+    "F401",   # Unused import in try/except fallback blocks
+    "C408",   # Dict literal rewrite
+    "RUF059"  # Unused figure unpacked variable
+]

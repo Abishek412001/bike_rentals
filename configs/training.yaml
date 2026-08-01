@@ -1,0 +1,11 @@
+cv:
+  n_splits: 5
+  strategy: TimeSeriesSplit
+
+thresholds:
+  min_r2_improvement_for_promotion: 0.005
+  max_acceptable_rmse: 50.0
+
+quantile_regression:
+  alpha_low: 0.10
+  alpha_high: 0.90

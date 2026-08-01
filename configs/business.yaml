@@ -1,0 +1,22 @@
+# Configurable Business Assumptions
+# All operational recommendations, revenue estimates, and fleet rebalancing decisions
+# are computed using these configurable assumptions.
+
+financial:
+  average_rental_price_usd: 2.75
+  operating_cost_per_rebalancing_truck_usd: 85.00
+  penalty_per_unfulfilled_demand_usd: 4.50
+
+logistics:
+  truck_capacity_bikes: 25
+  staff_capacity_bikes: 50
+  total_fleet_capacity: 500
+  station_dock_capacity: 40
+
+thresholds:
+  high_demand_threshold: 400
+  moderate_demand_threshold: 200
+  high_stockout_risk_utilization: 0.85
+  moderate_stockout_risk_utilization: 0.65
+
+disclaimer: "Calculated using configurable business assumptions."
